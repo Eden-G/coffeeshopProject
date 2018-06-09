@@ -2,16 +2,12 @@ package edu.mum.coffee.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-<<<<<<< HEAD
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-=======
->>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-<<<<<<< HEAD
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
@@ -26,13 +22,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private MyUserDetailService userDetailsService;  
 	
-=======
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-
-@Configuration
-@EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
->>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
 		/*http.sessionManagement()
@@ -56,7 +45,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-<<<<<<< HEAD
 		
 		auth.userDetailsService(userDetailsService)
 		.passwordEncoder(new PasswordEncoder() {
@@ -77,8 +65,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		
 //		auth.inMemoryAuthentication().withUser("akassa@mum.edu").password("pw").roles("ADMIN");
-=======
-		auth.inMemoryAuthentication().withUser("akassa@mum.edu").password("pw").roles("ADMIN");
->>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 	}
 }

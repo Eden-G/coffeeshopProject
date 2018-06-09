@@ -6,7 +6,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<<<<<<< HEAD
 <title>Add Person</title>
 </head>
 <body>
@@ -16,15 +15,6 @@
 	<a href="<c:url value="/logout" />"> Now logout </a>
 
 	<form:form action="createPerson" modelAttribute="personCreator" method="POST">
-=======
-<title>Add Product</title>
-</head>
-<body>
-	<h1><em>Please enter the product details below</em></h1>
-	<a href="<c:url value="/logout" />"> Now logout </a>
-
-	<form:form action="createPerson" modelAttribute="person" method="POST">
->>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 		<table>
 			<tr>
 				<td>First Name:</td>
@@ -42,14 +32,6 @@
 				<td><form:errors path="email" cssClass="error" /></td>
 			</tr>
 			<tr>
-<<<<<<< HEAD
-=======
-				<td>Address:</td>
-				<td><form:input path="address" /></td>
-				<td><form:errors path="address" cssClass="error" /></td>
-			</tr>
-			<tr>
->>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 				<td>Phone:</td>
 				<td><form:input path="phone" /></td>
 				<td><form:errors path="phone" cssClass="error" /></td>
@@ -59,7 +41,6 @@
 				<td><form:input path="enable" /></td>
 				<td><form:errors path="enable" cssClass="error" /></td>
 			</tr>
-<<<<<<< HEAD
 			<tr>
 				<td>Username:</td>
 				<td><form:input path="username" /></td>
@@ -97,10 +78,6 @@
 			</tr>
 		</table>
 		<input type="submit" value="Create Person"/>
-=======
-		</table>
-		<input type="submit" value="Add Person"/>
->>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 	</form:form>
 </body>
 </html>

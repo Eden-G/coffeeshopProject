@@ -10,7 +10,6 @@ public class User {
 	@Id
 	@GeneratedValue
 	private int id;
-<<<<<<< HEAD
 	private String username;
 	private String password;
 	private String role;
@@ -61,10 +60,5 @@ public class User {
 		this.role = role;
 	}
 	
-=======
-	private int username;
-	private int password;
-	private int role;
->>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 
 }
