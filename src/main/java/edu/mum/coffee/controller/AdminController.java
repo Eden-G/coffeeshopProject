@@ -1,11 +1,17 @@
 package edu.mum.coffee.controller;
 
+<<<<<<< HEAD
 import static org.assertj.core.api.Assertions.useRepresentation;
 
 import java.util.List;
 
 import javax.annotation.Resource;
 import javax.persistence.criteria.Order;
+=======
+import java.util.List;
+
+import javax.annotation.Resource;
+>>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -16,6 +22,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+<<<<<<< HEAD
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import edu.mum.coffee.domain.Address;
@@ -28,6 +35,14 @@ import edu.mum.coffee.service.OrderService;
 import edu.mum.coffee.service.PersonService;
 import edu.mum.coffee.service.ProductService;
 import edu.mum.coffee.service.UserService; 
+=======
+
+import edu.mum.coffee.domain.Person;
+import edu.mum.coffee.domain.Product;
+import edu.mum.coffee.domain.ProductType;
+import edu.mum.coffee.service.PersonService;
+import edu.mum.coffee.service.ProductService;
+>>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 
 @Controller
 public class AdminController {
@@ -35,10 +50,13 @@ public class AdminController {
 	private PersonService personService;
 	@Resource
 	private ProductService productService;
+<<<<<<< HEAD
 	@Resource
 	private UserService userService;
 	@Resource
 	private OrderService orderService;
+=======
+>>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 	
 	@RequestMapping(value="/createProduct")
 	public String createProductGet(Model model) {
@@ -107,6 +125,7 @@ public class AdminController {
 		
 		return "redirect:/listProduct";
 	}
+<<<<<<< HEAD
 	
 	////**********************Person**************************
 	@RequestMapping(value="/createPerson")
@@ -150,11 +169,26 @@ public class AdminController {
 		userService.saveUser(user);
 		
 		ra.addFlashAttribute("person", person);
+=======
+	////**********************Person**************************
+	@RequestMapping(value="/createPerson")
+	public String createPersonGet(Model model) {
+		Person person = new Person();
+		model.addAttribute("person", person);
+		return "createPerson";
+	}
+	
+	@RequestMapping(value="/createPerson", method=RequestMethod.POST)
+	public String createPersonPOST(@Valid @ModelAttribute("person") Person person, 
+									BindingResult result) {
+		System.out.println("-----Post method Reached------");
+>>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 		
 		if(result.hasErrors()) {
 			return "redirect:/createPerson";
 		}
 		else {
+<<<<<<< HEAD
 			System.out.println("Person Added");	
 			personService.savePerson(person);			
 			return "redirect:/personConfirmation";
@@ -242,4 +276,15 @@ public class AdminController {
 		model.addAttribute("orders", orders);
 		return "listOrder";
 	}
+=======
+			/*System.out.println("Person Added");
+			System.out.println(product.getProductType());*/
+			
+			personService.savePerson(person);
+			
+			return "personConfirmation";
+		}
+	}
+	
+>>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 }

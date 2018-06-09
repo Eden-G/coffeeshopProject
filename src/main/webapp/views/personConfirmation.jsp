@@ -16,6 +16,7 @@
 			<th>First Name</th>
 			<th>Last Name</th>
 			<th>Email</th>
+<<<<<<< HEAD
 			<th>City</th>
 			<td>State</td>
 			<td>Country</td>
@@ -23,11 +24,17 @@
 			<th>Phone</th>
 			<th>Enable</th>
 			
+=======
+			<th>Address</th>
+			<th>Phone</th>
+			<th>Enable</th>
+>>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 		</tr>
 		<tr>
 			<td>${person.firstName}</td>
 			<td>${person.lastName}</td>
 			<td>${person.email}</td>
+<<<<<<< HEAD
 			<td>${person.address.city}</td>
 			<td>${person.address.state}</td>
 			<td>${person.address.country}</td>
@@ -36,6 +43,12 @@
 			<td>${person.phone}</td>
 			<td>${person.enable}</td>
 			<td><a href="/person/${person.id}">Edit</a></td>
+=======
+			<td>${person.address}</td>
+			<td>${person.phone}</td>
+			<td>${person.enable}</td>
+			<td><a href="#">Edit</a></td>
+>>>>>>> c86621785757ba0495c0fd239a3f210b27c98405
 		</tr>
 	</table>
 	<br />
